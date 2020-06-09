@@ -7,14 +7,14 @@ This project was developed by GNU Radio 3.8.1  <br />
     git clone https://github.com/wadsonoliveira/GnuRadioEMMN.git  <br />
     cd GnuRadioEMMN  <br />
 #For install gr-floripasat module:  <br />
-    cd gr-floripasat  <br />
-    mkdir build  <br />
-    cd build  <br />
-    cmake ..  <br />
-    make  <br />
-    sudo make install  <br />
-    sudo ldconfig  <br />
-    cd ..  <br />
+    <p>cd gr-floripasat</p>  <br />
+    <p>mkdir build </p> <br />
+    <p>cd build </p>  <br />
+    <p>cmake .. </p>  <br />
+    <p>make </p> <br />
+    <p>sudo make install</p>  <br />
+    <p>sudo ldconfig</p>  <br />
+    <p>cd ..</p>  <br />
 #For install gr-INPE module:  <br />
     cd gr-INPE  <br />
     mkdir build  <br />
