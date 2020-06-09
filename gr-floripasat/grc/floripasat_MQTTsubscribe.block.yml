@@ -1,0 +1,31 @@
+id: floripasat_MQTTsubscribe
+label: MQTT subscribe Freq
+category: '[floripasat]'
+
+templates:
+  imports: import floripasat
+  make: floripasat.MQTTsubscribe(${broker}, ${port}, ${topic}, ${verbose})
+
+parameters:
+- id: broker
+  label: Broker
+  dtype: string
+- id: port
+  label: Port
+  dtype: int
+- id: topic
+  label: Topic
+  dtype: string
+- id: verbose
+  label: Verbose
+  dtype: bool
+  default: 'False'
+  options: ['True', 'False']
+  option_labels: ['Yes', 'No']
+
+outputs:
+- domain: stream
+  dtype: float
+  label: freq
+
+file_format: 1

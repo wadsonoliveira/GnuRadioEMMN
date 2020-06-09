@@ -1,0 +1,34 @@
+id: floripasat_rangeratestatic
+label: Range Rate Static
+category: '[floripasat]'
+
+templates:
+  imports: import floripasat
+  make: floripasat.rangeratestatic(${tle}, ${lat}, ${lon}, ${alt}, ${verbose})
+
+parameters:
+- id: tle
+  label: TLE
+  dtype: string
+- id: lat
+  label: Lat
+  dtype: float
+- id: lon
+  label: Lon
+  dtype: float
+- id: alt
+  label: Alt
+  dtype: float
+- id: verbose
+  label: Verbose
+  dtype: bool
+  default: 'False'
+  options: ['True', 'False']
+  option_labels: ['Yes', 'No']
+  
+outputs:
+- domain: stream
+  dtype: float
+  label: rangerate
+
+file_format: 1

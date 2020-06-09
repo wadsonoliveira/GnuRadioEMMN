@@ -1,0 +1,40 @@
+id: INPE_doppler_correction
+label: Doppler Correction INPE
+category: '[INPE]'
+
+templates:
+  imports: import INPE
+  make: INPE.doppler_correction(self.set_${target()}, ${verbose})
+
+
+parameters:
+- id: target
+  label: Variable
+  dtype: string
+- id: verbose
+  label: Verbose
+  dtype: bool
+  default: 'False'
+  options: ['True', 'False']
+  option_labels: ['Yes', 'No']
+
+inputs:
+- label: tle
+  domain: stream
+  dtype: byte
+- label: freq
+  domain: stream
+  dtype: byte
+- label: lat
+  domain: stream
+  dtype: byte
+- label: lon
+  domain: stream
+  dtype: byte
+- label: alt
+  domain: stream
+  dtype: byte
+
+#  'file_format' specifies the version of the GRC yml format used in the file
+#  and should usually not be changed.
+file_format: 1

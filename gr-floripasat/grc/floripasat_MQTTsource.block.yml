@@ -1,0 +1,32 @@
+id: floripasat_MQTTsource
+label: MQTT source
+category: '[floripasat]'
+
+templates:
+  imports: import floripasat
+  make: floripasat.MQTTsource(${host}, ${port}, ${topic}, ${verbose})
+
+parameters:
+- id: host
+  label: Host
+  dtype: string
+- id: port
+  label: Port
+  dtype: int
+- id: topic
+  label: Topic
+  dtype: string
+- id: verbose
+  label: Verbose
+  dtype: bool
+  default: 'False'
+  options: ['True', 'False']
+  option_labels: ['Yes', 'No']
+
+outputs:
+- domain: stream
+  dtype: byte
+
+#  'file_format' specifies the version of the GRC yml format used in the file
+#  and should usually not be changed.
+file_format: 1

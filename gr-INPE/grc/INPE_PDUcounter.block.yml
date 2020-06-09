@@ -1,0 +1,21 @@
+id: INPE_PDUcounter
+label: PDU counter
+category: '[INPE]'
+
+templates:
+  imports: import INPE
+  make: INPE.PDUcounter(self.set_${target()})
+
+parameters:
+- id: target
+  label: Variable
+  dtype: string
+  default: counter_variable_name
+
+inputs:
+- domain: message
+  id: in 
+
+#  'file_format' specifies the version of the GRC yml format used in the file
+#  and should usually not be changed.
+file_format: 1
